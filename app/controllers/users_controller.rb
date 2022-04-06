@@ -15,6 +15,9 @@ class UsersController < ApplicationController
         render plain: new_user.to_pleasant_string
     end
     def show
+        id = params[:id]
+        user = User.find(id)
+        render plain: user.to_pleasant_string
     end
     def update
     end
