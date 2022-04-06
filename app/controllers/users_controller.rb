@@ -19,8 +19,9 @@ class UsersController < ApplicationController
         user = User.find(id)
         render plain: user.to_pleasant_string
     end
-    def update
-    end
     def login
+        email = params[:email]
+        password = params[:password]
+        render plain: User.exists?(email: email, password: password)
     end
   end
