@@ -3,9 +3,18 @@ class UsersController < ApplicationController
     def index
       render plain: User.order(:name).map { |user| user.to_pleasant_string }.join("\n")
     end
-    def show
-    end
     def create
+        name = params[:name]
+        email = params[:email]
+        password = params[:password]
+        new_user = User.create!(
+          name: name,
+          email: email,
+          password: password,
+        )
+        render plain: new_user.to_pleasant_string
+    end
+    def show
     end
     def update
     end
