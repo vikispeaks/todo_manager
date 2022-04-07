@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="todo-app.css">
     <title>Todo</title>
 </head>
-<body class="flex-container">
-    <h1>MY App</h1>
-    <div>
-        <input type="text">
-        <input type="date">
-        <button>Add</button>
-    </div>
-    <div class="flex-wrapper">
+
+<body>
+    <div class="flex-container">
+        <h1>My To-do List</h1>
         <div>
-            <h2>Hello</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" name="One" id="" value="One">
-                    <label for="One">One</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Two" id="" value="Two">
-                    <label for="Two">Two</label>
-                </li>
-            </ul>
+            <input type="text" class="todo-input" placeholder="What's next?">
+            <input type="date" class="todo-date">
+            <button class="add-button">Add</button>
         </div>
-        <div>
-            <h2>Hello1</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" name="One" id="" value="One">
-                    <label for="One">One</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Two" id="" value="Two">
-                    <label for="Two">Two</label>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2>Hello2</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" name="One" id="" value="One">
-                    <label for="One">One</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Two" id="" value="Two">
-                    <label for="Two">Two</label>
-                </li>
-            </ul>
+        <div class="flex-wrapper">
+            <div>
+                <h2>Due Today <span>0/1</span></h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="One" id="" value="One">
+                        <label for="One">One</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Two" id="" value="Two">
+                        <label for="Two">Two</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Due Tomorrow <span>0/3</span></h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="One" id="" value="One">
+                        <label for="One">One</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Two" id="" value="Two">
+                        <label for="Two">Two</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Remaining <span>0/3</span></h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="One" id="" value="One">
+                        <label for="One">One</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Two" id="" value="Two">
+                        <label for="Two">Two</label>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
