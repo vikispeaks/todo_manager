@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -11,7 +11,8 @@ body {
   cursor: pointer;
 }
 
-input, button {
+input,
+button {
   font-family: "Open Sans";
 }
 
@@ -104,7 +105,7 @@ ul li:hover {
 }
 
 .additional-info {
-  color: #453C52;
+  color: #453c52;
   font-size: 12px;
 }
 
@@ -116,7 +117,7 @@ ul li:hover img.delete-icon {
   color: #c53030;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   width: 15px;
   height: 15px;
 }
