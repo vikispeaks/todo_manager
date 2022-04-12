@@ -113,6 +113,8 @@ ul li:hover {
 .delete-icon {
   display: none;
   vertical-align: inherit;
+  width: 16px;
+  height: 16px;
 }
 
 .additional-info {

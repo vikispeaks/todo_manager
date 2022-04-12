@@ -3,11 +3,7 @@
     <ul class="todo-group">
         <% todos.each do |todo| %>
             <li class="todo-item">
-            <% if todo.completed %>
-                <input type="checkbox" checked/>
-            <% else %>
-                <input type="checkbox"/>
-            <% end %>
+                <input type="checkbox" <%= todo.completed ? 'checked' : nil %>/>
             <label class="todo-item-label">
                 <span class="<%= todo.completed ? "completed" : "incomplete" %>">
                     <%= todo.todo_text %>
@@ -21,9 +17,7 @@
             <img
                 class="delete-icon"
                 src="delete.png"
-                alt=""
-                width="16px"
-                height="16px"
+                alt="Delete Todo"
             />
             </li>
         <% end %>
