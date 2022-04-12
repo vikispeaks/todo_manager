@@ -1,0 +1,24 @@
+<section>
+    <h2> <%= section_title %> <span class="additional-info"><%= todos.completed.count %> / <%= todos.count %></span></h2>
+    <ul>
+        <% todos.each do |todo| %>
+            <li class="todo-item">
+            <input type="checkbox" name="One" id="" value="One" />
+            <label class="todo-item-label">
+                <%= todo.todo_text %>
+                <% if show_date %>
+                <span class="todo-item-date"><%= todo.due_date.to_fs(:short) %></span>
+                <% end %>
+            </label>
+            <img
+                class="delete-icon"
+                src="delete.png"
+                alt=""
+                width="16px"
+                height="16px"
+            />
+            </li>
+        <% end %>
+    </ul>
+    
+</section>

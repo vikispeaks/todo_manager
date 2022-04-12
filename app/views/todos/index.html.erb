@@ -1,8 +1,27 @@
-<%= DateTime.now.to_s %>
-
-<%= Todo.count %>
-
-<% Todo.all.each do |value| %>
-  <p><%= value.todo_text %></p>
-  <p><%= value.due_date %></p>
-<% end %>
+<article class="flex-container">
+  <section>
+    <h1>My To-do List</h1>
+    <div class="add-todo-wrapper">
+      <input type="text" class="todo-input" placeholder="What's next?" />
+      <input type="date" class="todo-date" />
+      <button class="add-button">Add</button>
+    </div>
+  </section>
+  <section class="flex-wrapper">
+    <%= render partial: "todo-section", locals: {
+      section_title: "Overdue",
+      todos: Todo.overdue,
+      show_date: true
+    } %>
+    <%= render partial: "todo-section", locals: {
+      section_title: "Due Today",
+      todos: Todo.due_today,
+      show_date: false
+    } %>
+    <%= render partial: "todo-section", locals: {
+    section_title: "Due Later",
+    todos: Todo.due_later,
+    show_date: true
+    } %>
+  </section>
+</article>
