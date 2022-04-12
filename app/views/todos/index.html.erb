@@ -1,0 +1,8 @@
+<%= DateTime.now.to_s %>
+
+<%= Todo.count %>
+
+<% Todo.all.each do |value| %>
+  <p><%= value.todo_text %></p>
+  <p><%= value.due_date %></p>
+<% end %>
