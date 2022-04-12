@@ -65,6 +65,10 @@ h2 span {
   color: #777777;
 }
 
+.todo-item-label .completed{
+  text-decoration: line-through;
+}
+
 .add-button {
   height: 32px;
   width: 72px;
@@ -75,25 +79,25 @@ h2 span {
   color: #ffffff;
 }
 
-ul {
+ul.todo-group {
   list-style: none;
 }
 
-ul li {
+ul.todo-group li.todo-item {
   margin-bottom: 16px;
   padding: 2px 8px;
 }
 
-ul li input {
+ul.todo-group li.todo-item input {
   margin-right: 8px;
 }
 
-ul li label {
+ul.todo-group li.todo-item label {
   margin-right: 10px;
   vertical-align: top;
 }
 
-ul li span {
+ul.todo-group li.todo-item span {
   margin-right: 10px;
   vertical-align: top;
 }

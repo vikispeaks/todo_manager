@@ -1,13 +1,21 @@
 <section>
     <h2> <%= section_title %> <span class="additional-info"><%= todos.completed.count %> / <%= todos.count %></span></h2>
-    <ul>
+    <ul class="todo-group">
         <% todos.each do |todo| %>
             <li class="todo-item">
-            <input type="checkbox" name="One" id="" value="One" />
+            <% if todo.completed %>
+                <input type="checkbox" checked/>
+            <% else %>
+                <input type="checkbox"/>
+            <% end %>
             <label class="todo-item-label">
-                <%= todo.todo_text %>
+                <span class="<%= todo.completed ? "completed" : "incomplete" %>">
+                    <%= todo.todo_text %>
+                </span>
                 <% if show_date %>
-                <span class="todo-item-date"><%= todo.due_date.to_fs(:short) %></span>
+                    <span class="todo-item-date">
+                        <%= todo.due_date.to_fs(:short) %>
+                    </span>
                 <% end %>
             </label>
             <img
