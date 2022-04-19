@@ -1,11 +1,11 @@
 <article class="flex-container">
   <section>
     <h1>My To-do List</h1>
-    <form class="add-todo-wrapper" action="/todos" method="POST">
-      <input type="text" name="todo_text" class="todo-input" placeholder="What's next?" />
-      <input type="date" name="due_date" class="todo-date" />
-      <button class="add-button" type="submit">Add</button>
-    </form>
+    <%= form_with(url: "/todos" ,methods: "post", class: "add-todo-wrapper" ) do %>
+      <%= text_field_tag(:todo_text, nil, class: "todo-input", placeholder: "What's next?", :required => true) %>
+      <%= date_field_tag(:due_date, nil, class: "todo-date", :required => true)%>
+      <%= submit_tag("Add", class: "add-button") %>
+    <% end %>
   </section>
   <section class="flex-wrapper">
     <%= render partial: "todo-section", locals: {
