@@ -3,21 +3,20 @@ class TodosController < ApplicationController
 
   def index
     render "index"
-    # render plain: Todo.order(:due_date).map { |todo| todo.to_pleasent_string }.join("\n")
   end
 
   def show
     todo_id = params[:id]
     todo = Todo.find(todo_id)
     render "todo"
-    # render plain: todo.to_pleasent_string
+    render plain: todo.to_pleasent_string
   end
 
   def create
     todo_text = params[:todo_text]
     due_date = DateTime.parse(params[:due_date])
     new_todo = Todo.create(todo_text: todo_text, due_date: due_date, completed: false)
-    render plain: new_todo.to_pleasent_string
+    redirect_to todos_path
   end
 
   def update

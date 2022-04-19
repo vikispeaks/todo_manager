@@ -1,7 +1,7 @@
 <section>
     <h2> <%= section_title %> <span class="additional-info"><%= todos.completed.count %> / <%= todos.count %></span></h2>
     <ul class="todo-group">
-        <% todos.each do |todo| %>
+        <% todos.order(:due_date).each do |todo| %>
             <li class="todo-item">
                 <input type="checkbox" <%= todo.completed ? 'checked' : nil %>/>
             <label class="todo-item-label">
