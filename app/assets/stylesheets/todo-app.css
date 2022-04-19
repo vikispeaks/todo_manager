@@ -65,7 +65,7 @@ h2 span {
   color: #777777;
 }
 
-.todo-item-label .completed{
+.todo-item-label .completed {
   text-decoration: line-through;
 }
 
@@ -86,6 +86,8 @@ ul.todo-group {
 ul.todo-group li.todo-item {
   margin-bottom: 16px;
   padding: 2px 8px;
+  display: flex;
+  flex-direction: row;
 }
 
 ul.todo-group li.todo-item input {
@@ -122,7 +124,7 @@ ul li:hover {
   font-size: 12px;
 }
 
-ul li:hover img.delete-icon {
+ul li:hover .delete-icon {
   display: inline-block;
 }
 
